@@ -5,10 +5,11 @@ import "../styles/auth.css";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../components/Header";
 import Stars from '../assets/videoplayback5.webm';
+import { AuthContext } from "../context/AuthContext";
 
 export default function Register() {
 
-
+  const { setUser } = useContext(AuthContext);
   const [fullName, setFullName] = useState("");
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
@@ -24,9 +25,10 @@ export default function Register() {
         email,
         password
       });
+      setUser(res.data);
 
-      // navigate("/dashboard");
-        window.location.href = "/dashboard";
+      navigate("/dashboard");
+        // window.location.href = "/dashboard";
       // alert("Registration successful");
 
     } catch(err) {

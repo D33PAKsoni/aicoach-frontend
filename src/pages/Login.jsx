@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Header } from "../components/Header";
 import Stars from '../assets/videoplayback5.webm';
+import { AuthContext } from "../context/AuthContext";
 
 
 
@@ -16,7 +17,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
-
+  const { setUser } = useContext(AuthContext);
 
   const handleLogin = async () => {
 
@@ -26,8 +27,9 @@ export default function Login() {
       email,
       password
     });
-    // navigate("/dashboard");
-    window.location.href = "/dashboard";
+    setUser(res.data);
+    navigate("/dashboard");
+    // window.location.href = "/dashboard";
     // window.location.href = "/dashboard";
 
 
