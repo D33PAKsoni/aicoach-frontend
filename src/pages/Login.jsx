@@ -22,12 +22,13 @@ export default function Login() {
   const handleLogin = async () => {
 
   try {
-
     const res = await API.post("/auth/login", {
       email,
       password
     });
-    setUser(res.data);
+    if (res.data) {
+      setUser(res.data);
+    }
     navigate("/dashboard");
     // window.location.href = "/dashboard";
     // window.location.href = "/dashboard";
