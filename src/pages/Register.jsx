@@ -34,6 +34,7 @@ export default function Register() {
     } catch(err) {
 
       alert("Registration failed");
+      console.error("Registration error", err);
 
     }
   };
