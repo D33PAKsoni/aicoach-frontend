@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import API from "../api";
 import AuthInput from "../components/AuthInput";
 import GoogleLoginButton from "../components/GoogleLoginButton";
 import "../styles/auth.css";
-import { useNavigate, useContext } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Header } from "../components/Header";
 import Stars from '../assets/videoplayback5.webm';
