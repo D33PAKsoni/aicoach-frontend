@@ -14,15 +14,17 @@ import discord from '../assets/discord.png';
 export const DashHeader = () => {
 
 const navigate = useNavigate();
+const { user, setUser } = useContext(AuthContext);
 
 const handleLogout = async () => {
 
   try {
 
     await API.post("/auth/logout");
+    setUser(null);
 
-    // navigate("/login");
-    window.location.href = "/login";
+    navigate("/login");
+    // window.location.href = "/login";
 
 
   } catch (err) {
@@ -33,10 +35,11 @@ const handleLogout = async () => {
 };
 
 
-const { user } = useContext(AuthContext);
+
 var user1= "Anonymous"
 
-user1 = user?.full_name.split(' ')[0] || "Anonymous";
+// user1 = user?.full_name.split(' ')[0] || "Anonymous";
+user1 = user?.full_name?.split(' ')[0] || "Anonymous";
 if(user){
    console.log("Logged in as", user.email);
    
