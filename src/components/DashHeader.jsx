@@ -23,8 +23,8 @@ const handleLogout = async () => {
     await API.post("/auth/logout");
     setUser(null);
 
-    navigate("/login");
-    // window.location.href = "/login";
+    // navigate("/login");
+    window.location.href = "/login";
 
 
   } catch (err) {
