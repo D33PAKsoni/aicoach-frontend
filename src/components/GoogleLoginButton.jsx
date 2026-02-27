@@ -1,10 +1,9 @@
-import API from "../api";
 
 export default function GoogleLoginButton() {
 
   const handleGoogleLogin = async () => {
     // window.location.href = "http://localhost:8000/auth/google"
-    await API.get("/auth/login");
+    window.location.href = "https://deepakkumarsoni-aicoach.hf.space/auth/google"
   };
 
 
