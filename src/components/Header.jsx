@@ -33,11 +33,11 @@ const navigate = useNavigate();
             Minutes
           </a>
 
-          <img 
+          {/* <img 
             src={info} 
             alt="Logo Right" 
             className="logo-icon" 
-          />
+          /> */}
         </div>
 
 
