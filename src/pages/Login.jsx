@@ -26,11 +26,9 @@ export default function Login() {
       email,
       password
     });
-    if (res.data) {
-      setUser(res.data);
-    }
-    navigate("/dashboard");
-    // window.location.href = "/dashboard";
+    setUser(res.data);
+    // navigate("/dashboard");
+    window.location.href = "/dashboard";
     // window.location.href = "/dashboard";
 
 
