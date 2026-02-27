@@ -10,7 +10,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import Interview from './pages/Interview.jsx';
 import InterviewInstructions from './pages/InterviewInstructions';
-
+import './styles/App.css';
 
 export const App = () => {
   return (
