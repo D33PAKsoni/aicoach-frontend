@@ -14,7 +14,7 @@ import InterviewInstructions from './pages/InterviewInstructions';
 
 export const App = () => {
   return (
-    <div>
+    <div className='wholepage'>
       {/* <Landing /> */}
       <AuthProvider>
         <BrowserRouter>
