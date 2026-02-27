@@ -2,7 +2,7 @@ import { useState } from "react";
 import API from "../api";
 import AuthInput from "../components/AuthInput";
 import "../styles/auth.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useContext } from "react-router-dom";
 import { Header } from "../components/Header";
 import Stars from '../assets/videoplayback5.webm';
 import { AuthContext } from "../context/AuthContext";
