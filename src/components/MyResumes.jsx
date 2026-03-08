@@ -3,6 +3,7 @@ import API from '../api';
 import { AuthContext } from "../context/AuthContext";
 import { FilePlus, FileText, Trash2, Loader2, X, Eye } from 'lucide-react';
 import '../styles/MyResumes.css';
+import { API2 } from '../api';
 
 const MyResumes = () => {
     const { user } = useContext(AuthContext);
@@ -13,7 +14,7 @@ const MyResumes = () => {
 
     const fetchResumes = async () => {
         try {
-            const res = await API.get(`/resumes?user_id=${user.id}`);
+            const res = await API2.get(`/resumes?user_id=${user.id}`);
             setResumes(res.data);
         } catch (err) { console.error("Error fetching resumes", err); }
     };
@@ -27,7 +28,7 @@ const MyResumes = () => {
         formData.append("file", e.target.files[0]);
         formData.append("user_id", user.id);
         try {
-            await API.post("/upload-resume", formData);
+            await API2.post("/upload-resume", formData);
             fetchResumes();
         } catch (err) { alert("Upload failed"); }
         finally { setUploading(false); }
@@ -37,7 +38,7 @@ const MyResumes = () => {
         e.stopPropagation();
         if (window.confirm("Are you sure?")) {
             try {
-                await API.delete(`/resumes/${resumeId}`);
+                await API2.delete(`/resumes/${resumeId}`);
                 setResumes(resumes.filter(r => r.id !== resumeId));
             } catch (err) { alert("Delete failed"); }
         }
@@ -45,7 +46,7 @@ const MyResumes = () => {
 
     const handlePreview = async (resumeId, fileName) => {
         try {
-            const response = await API.get(`/resumes/download/${resumeId}`, { responseType: 'blob' });
+            const response = await API2.get(`/resumes/download/${resumeId}`, { responseType: 'blob' });
             const fileUrl = URL.createObjectURL(response.data);
             setPreviewUrl(fileUrl);
             setPreviewName(fileName);
