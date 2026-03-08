@@ -6,5 +6,10 @@ const API = axios.create({
   withCredentials: true
 });
 
+export const API2 = axios.create({
+  baseURL: "https://deepakkumarsoni-aicoach2.hf.space",
+  withCredentials: true
+});
+
 export default API;
 
