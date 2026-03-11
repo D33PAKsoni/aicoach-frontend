@@ -5,7 +5,6 @@ import { AuthContext } from "../context/AuthContext";
 import API from "../api";
 import { useNavigate } from "react-router-dom";
 import logo from '../assets/logo1.png';
-import info from '../assets/info.png';
 import features from '../assets/features.png';
 import discord from '../assets/discord.png';
 

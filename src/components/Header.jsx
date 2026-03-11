@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import logo from '../assets/logo1.png';
-import info from '../assets/info.png';
 import features from '../assets/features.png';
 import discord from '../assets/discord.png';
 
