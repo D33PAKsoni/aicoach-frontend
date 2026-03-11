@@ -10,6 +10,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
 import Interview from './pages/Interview.jsx';
 import InterviewInstructions from './pages/InterviewInstructions';
+import { About } from './pages/About.jsx';
+import { Contact } from './pages/Contact.jsx';
 import './App.css';
 
 export const App = () => {
@@ -27,6 +29,8 @@ export const App = () => {
             <Route path="/dashboard"element={<ProtectedRoute><Dashboard /></ProtectedRoute>}/>
             <Route path="/interview" element={<ProtectedRoute><Interview /></ProtectedRoute>}/>
             <Route path="/instructions" element={<ProtectedRoute> <InterviewInstructions /></ProtectedRoute>} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
