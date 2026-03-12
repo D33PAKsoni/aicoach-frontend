@@ -68,7 +68,7 @@ if(user){
           /> */}
         </div>
 
-
+{/* 
         <nav className="nav-pill menu-pill">
           <ul className="nav-links">
 
@@ -129,7 +129,7 @@ if(user){
               
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         <div className="nav-pill auth-pill">
           <div className="greet-text"> 

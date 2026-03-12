@@ -49,7 +49,7 @@ export const Contact = () => {
               Have questions about the AI Interview Coach? Whether you're interested in the open-source code or have feedback on the internship project, I'd love to hear from you.
             </p>
 
-            <div className="contact-methods">
+            {/* <div className="contact-methods">
               <div className="method-item">
                 <Mail className="method-icon" />
                 <span>deepak.kr.s1999@gmail.com</span>
@@ -58,11 +58,11 @@ export const Contact = () => {
                 <MapPin className="method-icon" />
                 <span>Remote Support</span>
               </div>
-            </div>
+            </div> */}
 
             <div className="social-links">
-              <a href="https://github.com/D33PAKsoni/" className="social-icon"><SiGithub size={30} /></a>
-              <a href="https://www.linkedin.com/in/krishnadeepaksoni/" className="social-icon"><Linkedin size={30} /></a>
+              <a href="https://github.com/D33PAKsoni/" className="social-icon"><SiGithub size={30} color="pink"/></a>
+              <a href="https://www.linkedin.com/in/krishnadeepaksoni/" className="social-icon"><Linkedin size={30} color='lightblue'/></a>
             </div>
           </div>
 

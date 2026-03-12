@@ -19,14 +19,14 @@ const navigate = useNavigate();
   return (
     <div className="header-container">
       <header className="navbar-container">
-        <div className="nav-pill logo-pill">
+        <div onClick={()=> navigate('/')} className="nav-pill logo-pill logo-pill">
           <img 
             src={logo} 
             alt="Logo Left" 
             className="logo-icon" 
           />
           
-          <a href="/" className="logo-text">
+          <a onClick={()=> navigate('/')} className="logo-text">
             <strong>Interview</strong>
             <br />
             Minutes
@@ -43,7 +43,7 @@ const navigate = useNavigate();
         <nav className="nav-pill menu-pill">
           <ul className="nav-links">
 
-            <li><a href="#about" className="nav-item">About</a></li>
+            <li><a onClick={()=> navigate('/about')} className="nav-item">About</a></li>
 
 
             <li className="nav-item-group">
@@ -53,10 +53,11 @@ const navigate = useNavigate();
                 <div className="dropdown-menu">
                   <div className="dropdown-content">
                     <div className="link-list">
-                      <h4>Includes</h4>
-                      <a href="#mock-interviews">Mock Interviews</a>
-                      <a href="#coding-challenges">Camera Ettiquets</a>
-                      <a href="#system-design">Speech Analysis</a>
+                      <h4>Highlights</h4>
+                      <a href="#features-grid">Resume JD Scoring</a>
+                      <a href="#features-grid">Real Time Analysis</a>
+                      <a href="#features-grid">Live Monitoring</a>
+                      <a href="#features-grid">Answer Analysis</a>
                     </div>
                     
                     <div className="floating-icon-container">
@@ -78,9 +79,8 @@ const navigate = useNavigate();
                 <div className="dropdown-menu">
                   <div className="dropdown-content">
                     <div className="link-list">
-                      <h4>Community</h4>
-                      <a href="#discord">Discord Server</a>
-                      <a href="#linkedin">LinkedIn Group</a>
+                      <a href="https://github.com/D33PAKsoni/">Github</a>
+                      <a href="https://www.linkedin.com/in/krishnadeepaksoni/">LinkedIn</a>
                     </div>
 
                     <div className="floating-icon-container">
@@ -96,7 +96,7 @@ const navigate = useNavigate();
             </li>
 
             <li>
-              <a href="#support" className="nav-item">Support</a>
+              <a onClick={()=> navigate('/contact')} className="nav-item">Contact Us</a>
               
             </li>
           </ul>

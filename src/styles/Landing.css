@@ -43,31 +43,11 @@ section {
 }
 
 .hero { 
-  background: #1abc9c; 
   z-index: 1; 
-}
-.features {  
-  z-index: 2; 
-  background-image: url('../assets/galaxy.jpg');
-  background-size: cover;
-  height: 100vh; 
-}
-.results { 
-  z-index: 3;
-  background-image: url('../assets/stars.jpg');
-  background-size: cover;
-  height: 100vh;  
-}
-.footer { 
-  background-image: url('../assets/earth.jpg');
-  background-size: cover;
-  z-index: 4; 
-  height: 100vh; 
 }
 
 .hero-contents {
   position: absolute;
-  /* background-color: rgba(0, 0, 255, 0.188); */
   width: 95vw;
   height: 80vh;
   top: 15vh;
@@ -359,11 +339,14 @@ section {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 20px;
-  background: linear-gradient(to right, #ffffff, #bc681a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* background: linear-gradient(to right, #f6ff00, #ff0000), ; */
+  /* -webkit-background-clip: text; */
+  /* background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  -webkit-text-stroke: 1px rgb(248, 248, 248);
+  color: black;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  /* text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
 }
 
 .hero-subtitle {
@@ -401,7 +384,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #96bc1a;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -432,7 +415,7 @@ section {
 }
 
 .bar-value {
-  color: #96bc1a;
+  color: #bab702;
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -443,7 +426,7 @@ section {
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 50px;
-  background: #96bc1a;
+  background: #0221ba;
   border: none;
   color: white;
   transition: all 0.3s ease;
@@ -454,4 +437,145 @@ section {
   background: #16a085;
   transform: scale(1.05);
   box-shadow: 0 15px 25px rgba(26, 188, 156, 0.4);
+}
+
+
+
+
+
+
+
+
+/* Features Section Specifics */
+.features {
+  background-image: url('../assets/stars.jpg');
+  background-size: contain;
+  background-position: center;
+  padding: 100px 0;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+
+/* Hover Animation for Feature Cards */
+.feature-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  background: rgba(150, 188, 26, 0.1);
+  border-color: #f1e105;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(150, 188, 26, 0.2);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  color: #f1e105;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #dbb0b0;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Footer Section Specifics */
+.footer {
+  background-image: url('../assets/earth.jpg');
+  background-size: fill;
+  background-position: top center;
+  padding: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  
+  color: rgb(0, 0, 0);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.footer-logo {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+.footer-links h4, .footer-info h4 {
+  color: #fff200;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-links li:hover {
+  color: #f80101;
+  padding-left: 5px;
+}
+
+.footer-info p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  transition: 0.3s;
+  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.518);
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  background-color: #f1c40f;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
 }
